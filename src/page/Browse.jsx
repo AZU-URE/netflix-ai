@@ -5,9 +5,8 @@ import VideoBanner from "../component/VideoBanner";
 function Browse() {
   useNowPlayingMovie();
 
-  console.log("browse2");
   return (
-    <div className="w-full h-full">
+    <div className="w-full">
       <Header />
       <VideoBanner />
     </div>

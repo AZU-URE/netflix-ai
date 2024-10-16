@@ -7,13 +7,11 @@ function VideoBackground({ id }) {
   console.log(key);
 
   return (
-    <div className="h-full w-full">
+    <div className="w-full  aspect-video ">
       <iframe
-        className="w-full h-1/2"
-        src={`https://www.youtube.com/embed/${key}`}
+        className="w-full h-full"
+        src={`https://www.youtube.com/embed/${key}?autoplay=1&mute=1&rel=1&showinfo=0&controls=1&modestbranding=0`}
         title={id + " trailer"}
-        // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        // referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
     </div>

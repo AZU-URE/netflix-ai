@@ -12,7 +12,7 @@ function VideoBanner() {
   const { id, title, overview } = movie;
 
   return (
-    <div className="w-full h-full ">
+    <div className="w-full">
       <VideoBackground id={id} />
       <MovieDetail title={title} description={overview} />
     </div>
