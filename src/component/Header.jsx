@@ -37,7 +37,7 @@ function Header() {
   }, []);
 
   return (
-    <div className=" z-20 bg-gradient-to-b from-black w-full absolute px-[5rem] py-[1rem] flex items-center justify-between">
+    <div className=" z-20 bg-gradient-to-b from-black w-full absolute px-[3rem] py-[1rem] flex items-center justify-between">
       <svg
         viewBox="0 0 111 30"
         onClick={() => navigate("/")}

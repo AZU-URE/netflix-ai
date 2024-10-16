@@ -2,7 +2,7 @@ import React from "react";
 
 function MainMovieCard({ title, description }) {
   return (
-    <div className="absolute w-full top-0 pt-[15%] pl-[7rem] text-white aspect-video bg-gradient-to-r from-black/80">
+    <div className="absolute w-full top-0 pt-[10%] pl-[7rem] text-white aspect-video bg-gradient-to-r from-black/80">
       <h1 className="text-[4rem] font-bold mb-[1rem] w-1/2 leading-tight">
         {title}
       </h1>
