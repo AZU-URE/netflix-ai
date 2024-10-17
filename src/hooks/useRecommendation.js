@@ -21,10 +21,10 @@ export default function useRecommendation() {
         const result = await model.generateContent(query);
         const response = result.response.text();
         const moviesName = response.split(",");
-        // console.log(moviesName);
+        console.log(moviesName);
         const promiseArr = moviesName.map((movie) => getMovieDetail(movie));
         const moviesDetails = await Promise.all(promiseArr);
-        // console.log(moviesDetails);
+        console.log(moviesDetails);
         dispatch(addMovieDetails({ moviesName, moviesDetails }));
       } catch (error) {
         // console.log(error);

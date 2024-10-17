@@ -11,7 +11,7 @@ const movieSlice = createSlice({
   },
   reducers: {
     addNowPlayingMovie: (state, action) => {
-      state.nowPlayingMovie = [...state.nowPlayingMovie, ...action.payload];
+      state.nowPlayingMovie = action.payload;
     },
     emptyList: (state) => {
       state.nowPlayingMovie = [];
@@ -23,13 +23,13 @@ const movieSlice = createSlice({
       state.mainMovieTrailerKey = action.payload;
     },
     addPopularMovie: (state, action) => {
-      state.popularMovie = [...state.popularMovie, ...action.payload];
+      state.popularMovie = action.payload;
     },
     addUpcomingMovie: (state, action) => {
-      state.upcomingMovie = [...state.upcomingMovie, ...action.payload];
+      state.upcomingMovie = action.payload;
     },
     addTopRatedMovie: (state, action) => {
-      state.topRatedMovie = [...state.topRatedMovie, ...action.payload];
+      state.topRatedMovie = action.payload;
     },
   },
 });

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { MOVIE_API_OPTIONs } from "../constants/constant";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   addNowPlayingMovie,
   emptyList,
@@ -11,13 +11,16 @@ import {
 
 const useMovieList = async () => {
   const dispatch = useDispatch();
+  const nowPlayingMovies = useSelector((store) => store.movie.nowPlayingMovie);
+  const popularMovies = useSelector((store) => store.movie.popularMovie);
+  const topRatedMovies = useSelector((store) => store.movie.topRatedMovie);
+  const upcomingMovies = useSelector((store) => store.movie.upcomingMovie);
 
   useEffect(() => {
-    getNowPlaying();
-    getPopular();
-    getTopRated();
-    getUpcoming();
-    return () => dispatch(emptyList());
+    !nowPlayingMovies.length && getNowPlaying();
+    !popularMovies.length && getPopular();
+    !topRatedMovies.length && getTopRated();
+    !upcomingMovies.length && getUpcoming();
   }, []);
 
   const getNowPlaying = async () => {

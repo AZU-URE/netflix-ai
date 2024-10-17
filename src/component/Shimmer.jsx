@@ -4,8 +4,8 @@ function Shimmer() {
   const arr = new Array(5).fill(0);
   return (
     <div className="w-full flex items-center justify-around">
-      {arr.map((el) => (
-        <Card />
+      {arr.map((el, index) => (
+        <Card key={index} />
       ))}
     </div>
   );

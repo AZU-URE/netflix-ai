@@ -1,11 +1,13 @@
+import { useEffect } from "react";
 import { MOVIE_API_OPTIONs } from "../constants/constant";
 import { setMainMovieTrailerKey } from "../util/movieSlice";
 import { useDispatch } from "react-redux";
 
 const useMainMovieTrailer = (movieId) => {
-  // console.log("trailer");
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    getTrailer();
+  }, []);
   // console.log(movieId);
   const getTrailer = async () => {
     // console.log(movieId);
@@ -20,7 +22,6 @@ const useMainMovieTrailer = (movieId) => {
       ? dispatch(setMainMovieTrailerKey(trailers[0]?.key))
       : dispatch(setMainMovieTrailerKey(json?.results[0]?.key));
   };
-  getTrailer();
 };
 
 export default useMainMovieTrailer;
