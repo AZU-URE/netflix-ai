@@ -18,7 +18,7 @@ export const useAuthFunctions = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode + errorMessage);
+        alert(errorCode + errorMessage);
       });
   };
 
@@ -31,7 +31,7 @@ export const useAuthFunctions = () => {
       .catch((error) => {
         // An error happened.
         navigate("/error");
-        console.log(error);
+        alert(error.message);
       });
   };
 

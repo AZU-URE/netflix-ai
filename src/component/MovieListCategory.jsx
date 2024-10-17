@@ -10,7 +10,7 @@ function MovieListCategory({ title, movies }) {
     <div className=" w-full pl-[3rem]">
       <h1 className="text-3xl text-white mb-[1rem] font-medium">{title}</h1>
       <div className="flex overflow-x-scroll scrollbar-none ">
-        <div className="flex ">
+        <div className="flex space-x-[2rem] ">
           {movies.map((movie) => (
             <MovieCard
               key={movie.id}
