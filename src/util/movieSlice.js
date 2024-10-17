@@ -15,6 +15,9 @@ const movieSlice = createSlice({
     },
     emptyList: (state) => {
       state.nowPlayingMovie = [];
+      state.popularMovie = [];
+      state.topRatedMovie = [];
+      state.upcomingMovie = [];
     },
     setMainMovieTrailerKey: (state, action) => {
       state.mainMovieTrailerKey = action.payload;

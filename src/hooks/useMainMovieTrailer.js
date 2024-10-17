@@ -3,7 +3,7 @@ import { setMainMovieTrailerKey } from "../util/movieSlice";
 import { useDispatch } from "react-redux";
 
 const useMainMovieTrailer = (movieId) => {
-  console.log("trailer");
+  // console.log("trailer");
   const dispatch = useDispatch();
 
   // console.log(movieId);
@@ -14,7 +14,7 @@ const useMainMovieTrailer = (movieId) => {
     const json = await data.json();
     // console.log(json);
     const trailers = json?.results.find((el) => el.type === "Trailer");
-    console.log(trailers);
+    // console.log(trailers);
 
     trailers.length
       ? dispatch(setMainMovieTrailerKey(trailers[0]?.key))

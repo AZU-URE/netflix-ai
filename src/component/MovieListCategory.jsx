@@ -2,7 +2,7 @@ import React from "react";
 import MovieCard from "./MovieCard";
 import Shimmer from "./Shimmer";
 function MovieListCategory({ title, movies }) {
-  console.log(movies);
+  // console.log(movies);
   if (movies === null) {
     return <Shimmer />;
   }

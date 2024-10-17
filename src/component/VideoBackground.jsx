@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 function VideoBackground({ id }) {
   useMainMovieTrailer(id);
   const key = useSelector((state) => state.movie.mainMovieTrailerKey);
-  console.log(key);
-
+  // console.log(key);
+  if (key === null) return;
   return (
     <div className="w-full  aspect-video ">
       <iframe

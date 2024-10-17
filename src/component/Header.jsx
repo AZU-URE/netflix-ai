@@ -8,6 +8,8 @@ import { auth } from "../util/firebaseConfig";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../util/userSlice";
 import { useNavigate } from "react-router-dom";
+import { LANGUAGE_CODES } from "../constants/constant";
+import { setLang } from "../util/configSlice";
 function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -28,13 +30,22 @@ function Header() {
         }
       } else {
         dispatch(removeUser());
-        if (routes[1] === "browse") {
+        if (routes[1] === "browse" || routes[1] === "search") {
           navigate("/");
         }
       }
     });
     return () => unsubscribe();
   }, []);
+
+  const handleSearch = () => {
+    const url = routes[1] === "search" ? "/browse" : "/search";
+    navigate(url);
+  };
+
+  const handleLanguage = (e) => {
+    dispatch(setLang(e.target.value));
+  };
 
   return (
     <div className=" z-20 bg-gradient-to-b from-black w-full absolute px-[3rem] py-[1rem] flex items-center justify-between">
@@ -54,22 +65,41 @@ function Header() {
         </g>
       </svg>
       {/* <button onClick={() => navigate("/browse")}>browser</button> */}
-      {path.includes("login") ? null : path.includes("browse") ? (
-        <div className="flex items-center ">
+      {path.includes("login") ? null : path.includes("browse") ||
+        path.includes("search") ? (
+        <div className="flex items-center space-x-[1rem] ">
+          <button
+            onClick={handleSearch}
+            className="bg-purple-600 hover:bg-opacity-80 rounded-md py-[0.25rem] px-[1rem] text-white  font-sans font-medium text-base"
+          >
+            {routes[1] === "search" ? "Browse Movies" : "Ai Movie Search"}
+          </button>
+
+          <button
+            onClick={LogOut}
+            className="bg-netflixRed hover:bg-opacity-80 rounded-md py-[0.25rem] px-[1rem] text-white  font-sans font-medium text-base"
+          >
+            Sign Out
+          </button>
+          {path.includes("search") && (
+            <select
+              className="p-1 px-2 rounded-md bg-zinc-950 text-white"
+              onClick={handleLanguage}
+            >
+              {LANGUAGE_CODES.map((lang) => (
+                <option key={lang.code} value={lang.code}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
           <div className="">
             <img
-              className="w-[2.5rem] rounded-full"
+              className="w-[2.5rem] rounded-full text-white"
               src={photoURL}
               alt={"User"}
             ></img>
           </div>
-
-          <button
-            onClick={LogOut}
-            className="bg-netflixRed hover:bg-opacity-80 rounded-md py-[0.25rem] px-[1rem] text-white m-[2rem] font-sans font-medium text-base"
-          >
-            Sign Out
-          </button>
         </div>
       ) : (
         <Link to={"/login"}>
