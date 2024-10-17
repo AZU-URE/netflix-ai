@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import MovieCard from "./MovieCard";
 import { suggestionMovieCard } from "./MovieCard";
+import Shimmer from "./Shimmer";
 function GptMovieSuggestion() {
   const SuggestionMovieCard = suggestionMovieCard(MovieCard);
   const moviesList = useSelector(
@@ -11,7 +12,17 @@ function GptMovieSuggestion() {
     (store) => store.recommendation.loadingRecommendations
   );
   // console.log(moviesList);
-  if (loading) return <p className="mt-[2rem] text-white text-xl">Loading</p>;
+  if (loading)
+    return (
+      <div className="flex flex-col bg-black/80 w-[80%] justify-around relative">
+        <p className="w-full font-bold text-center tracking-[0.5em] text-white text-[2rem] my-[0.25rem]">
+          LOADING..
+        </p>
+        <div className="m-[2rem] mt-0">
+          <Shimmer />
+        </div>
+      </div>
+    );
   // if (moviesList.length === 0) return;
   return (
     moviesList.length !== 0 && (

@@ -8,6 +8,9 @@ function GptSearch() {
   const moviesList = useSelector(
     (store) => store.recommendation.recommendedMovies
   );
+  const loading = useSelector(
+    (store) => store.recommendation.loadingRecommendations
+  );
   return (
     <div className="relative w-full h-screen ">
       <Header />
@@ -18,7 +21,7 @@ function GptSearch() {
       />
       <div
         className={`w-full h-full flex flex-col items-center  space-y-[2rem]  ${
-          moviesList.length === 0
+          moviesList.length === 0 || loading
             ? " justify-start p-[10%]"
             : "justify-end pb-[1.5rem]"
         } `}
