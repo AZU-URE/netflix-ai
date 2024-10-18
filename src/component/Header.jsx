@@ -107,11 +107,16 @@ function Header() {
           )}
           <div className="group flex flex-col">
             <img
-              className="md:w-[2.5rem] w-[2rem] rounded-md text-white"
+              className="md:w-[2.5rem] w-[2rem] rounded-md text-white md:block hidden"
               src={NETFLIX_USER_DEFAULT_LOGO}
               alt={"User"}
             ></img>
-            <div className=" hidden absolute top-[3rem] right-[0rem] group-hover:flex group-hover:flex-col group-hover:space-y-[0.75rem] p-[0.75rem]  bg-black/60 backdrop-blur-sm">
+            <img
+              className="md:w-[2.5rem] w-[2rem] rounded-md text-white md:hidden"
+              src={HAMBURGER}
+              alt={"User"}
+            ></img>
+            <div className=" hidden absolute top-[3rem] right-[0rem] md:group-hover:hidden group-hover:flex group-hover:flex-col group-hover:space-y-[0.75rem] p-[0.75rem]  bg-black/60 backdrop-blur-sm">
               <button
                 onClick={handleSearch}
                 className="bg-purple-600 my-1 hover:bg-opacity-80 rounded-md py-[0.25rem]  px-[0.5rem] text-white  font-sans font-medium text-sm"
