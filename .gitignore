@@ -24,3 +24,6 @@ yarn-error.log*
 
 .env
 todo.txt
+
+.dist
+.firebase

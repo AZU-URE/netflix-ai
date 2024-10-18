@@ -1,8 +1,7 @@
 import React from "react";
 import useMainMovieTrailer from "../hooks/useMainMovieTrailer";
 import { useSelector } from "react-redux";
-function VideoBackground({ id }) {
-  useMainMovieTrailer(id);
+function VideoBackground() {
   const key = useSelector((state) => state.movie.mainMovieTrailerKey);
   // console.log(key);
   if (key === null) return;
@@ -11,7 +10,7 @@ function VideoBackground({ id }) {
       <iframe
         className="w-full h-full"
         src={`https://www.youtube.com/embed/${key}?autoplay=1&mute=1&rel=1&showinfo=0&controls=1&modestbranding=0`}
-        title={id + " trailer"}
+        title={" trailer"}
         allowFullScreen
       ></iframe>
     </div>
