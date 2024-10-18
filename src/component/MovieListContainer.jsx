@@ -7,8 +7,8 @@ function MovieListContainer() {
   const topRatedMovies = useSelector((store) => store.movie.topRatedMovie);
   const upcomingMovies = useSelector((store) => store.movie.upcomingMovie);
   return (
-    <div className=" bg-black">
-      <div className="-mt-[15rem] space-y-[3rem] z-10 relative">
+    <div className="bg-black">
+      <div className="xl:-mt-[15rem] -mt-1 space-y-[3rem] z-10 relative">
         <MovieListCategory title={"Now In Theatre"} movies={nowPlayingMovies} />
         <MovieListCategory title={"Upcoming movies"} movies={upcomingMovies} />
         <MovieListCategory title={"Popular Movies"} movies={popularMovies} />

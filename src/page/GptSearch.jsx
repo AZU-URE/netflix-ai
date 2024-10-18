@@ -22,8 +22,8 @@ function GptSearch() {
       <div
         className={`w-full h-full flex flex-col items-center  space-y-[2rem]  ${
           moviesList.length === 0 || loading
-            ? " justify-start p-[10%]"
-            : "justify-end pb-[1.5rem]"
+            ? " justify-start xl:pt-[10%] md:pt-[15%] pt-[20%]"
+            : "xl:justify-end justify-start xl:pb-[1.5rem] xl:pt-0 md:pt-[15%] pt-[20%] pb-1"
         } `}
       >
         <GptSearchBar />

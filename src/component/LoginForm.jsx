@@ -99,7 +99,7 @@ function LoginForm() {
   //   </div>
   // );
   return (
-    <div className="w-[30%] bg-black/60 py-[2rem] px-[4rem] rounded-[4px]">
+    <div className="lg:w-[40%] w-[80%] bg-black/60 py-[2rem] px-[4rem] rounded-[4px]">
       <h3 className="font-black font-sans text-[2rem] mb-[2rem]  text-center">
         LogIn
       </h3>

@@ -14,7 +14,7 @@ export function suggestionMovieCard(MovieCard) {
     return (
       <div className="flex flex-col p-[1rem] items-center justify-start bg-slate-50/20 space-y-[0.5rem]   ">
         <MovieCard name={name} poster={poster} />
-        <p className="text-white text-lg text-center w-[10rem] font-sans">
+        <p className="text-white md:text-lg text-2xl text-center md:w-[10rem] font-sans">
           {name}
         </p>
       </div>

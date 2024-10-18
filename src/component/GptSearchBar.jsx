@@ -15,17 +15,17 @@ function GptSearchBar() {
     getRecommendation(e.target.search.value);
   };
   return (
-    <div className="w-2/3 bg-black/70 p-[1.5rem]">
-      <form className="flex space-x-[1rem]" onSubmit={onSearch}>
+    <div className="lg:w-2/3 w-[90%] bg-black/70 xl:p-[1.5rem] md:p-[1rem] p-[0.5rem]">
+      <form className="flex md:space-x-[1rem] space-x-2" onSubmit={onSearch}>
         <input
           type="text"
           name="search"
           value={searchInput || ""}
           placeholder={lang[code].searchPlaceholder}
           onChange={(e) => dispatch(setSearchInput(e.target.value))}
-          className="w-full p-[1rem] rounded-sm"
+          className="w-full md:p-[1rem] p-[0.25rem] rounded-sm"
         ></input>
-        <button className="text-white bg-netflixRed w-[18%] rounded-sm text-lg font-medium tracking-widest uppercase">
+        <button className="text-white bg-netflixRed md:w-[18%] w-[25%] rounded-sm md:text-lg text-sm font-medium md:tracking-widest uppercase">
           {lang[code].search}
         </button>
       </form>

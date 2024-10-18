@@ -9,7 +9,7 @@ function Home() {
       <Header />
       <div className="h-full w-full opacity-70 absolute bg-gradient-to-b from-black via-black to-black"></div>
       <div className="flex flex-col items-center justify-center absolute w-full h-full ">
-        <h1 className="font-sans font-black text-[3.5rem] text-white text-center">
+        <h1 className="font-sans font-black lg:text-[3.5rem] md:text-[3rem] text-[2rem] text-white text-center">
           Unlimited movies,
           <br /> TV shows and more
         </h1>

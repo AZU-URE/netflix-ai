@@ -7,8 +7,10 @@ function MovieListCategory({ title, movies }) {
     return <Shimmer />;
   }
   return (
-    <div className=" w-full pl-[3rem]">
-      <h1 className="text-3xl text-white mb-[1rem] font-medium">{title}</h1>
+    <div className=" w-full md:pl-[3rem] pl-[1rem]">
+      <h1 className="md:text-3xl text-[1.5rem] text-white mb-[1rem] font-medium">
+        {title}
+      </h1>
       <div className="flex overflow-x-scroll scrollbar-none ">
         <div className="flex space-x-[2rem] ">
           {movies.map((movie) => (

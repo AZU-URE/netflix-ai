@@ -13,7 +13,7 @@ export const recommendationSlice = createSlice({
       const { moviesName, moviesDetails } = action.payload;
       state.recommendedMovieNames = moviesName;
       const movieList = moviesDetails.map((movie) =>
-        movie.results.find((el, index) => index === 0)
+        movie.results.find((el, index) => index === 0 && el !== null)
       );
       state.recommendedMovies = movieList;
     },

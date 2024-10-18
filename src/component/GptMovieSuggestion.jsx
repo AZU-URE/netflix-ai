@@ -15,7 +15,7 @@ function GptMovieSuggestion() {
   if (loading)
     return (
       <div className="flex flex-col bg-black/80 w-[80%] justify-around relative">
-        <p className="w-full font-bold text-center tracking-[0.5em] text-white text-[2rem] my-[0.25rem]">
+        <p className="w-full font-bold text-center md:tracking-[0.5em] tracking-[0.2em] text-white text-[2rem] my-[0.25rem]">
           LOADING..
         </p>
         <div className="m-[2rem] mt-0">
@@ -26,7 +26,7 @@ function GptMovieSuggestion() {
   // if (moviesList.length === 0) return;
   return (
     moviesList.length !== 0 && (
-      <div className="flex space-x-[2rem] bg-black/80 w-[80%] justify-around p-[2rem]">
+      <div className="flex md:flex-row flex-col space-y-[1rem] md:space-y-0 md:space-x-[2rem] bg-black/80 xl:w-[80%] w-[90%] overflow-x-scroll scrollbar-none  justify-around xl:p-[2rem] p-[1rem]">
         {moviesList.map((movie) => (
           <SuggestionMovieCard
             key={movie?.id}
