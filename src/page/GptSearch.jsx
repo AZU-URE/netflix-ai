@@ -17,7 +17,7 @@ function GptSearch() {
       <img
         src={netflixBg}
         alt="background"
-        className="object-cover w-full h-full absolute -z-10 "
+        className="object-cover w-full h-full  -z-10 fixed "
       />
       <div
         className={`w-full h-full flex flex-col items-center  space-y-[2rem]  ${

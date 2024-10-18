@@ -27,13 +27,16 @@ function GptMovieSuggestion() {
   return (
     moviesList.length !== 0 && (
       <div className="flex md:flex-row flex-col space-y-[1rem] md:space-y-0 md:space-x-[2rem] bg-black/80 xl:w-[80%] w-[90%] overflow-x-scroll scrollbar-none  justify-around xl:p-[2rem] p-[1rem]">
-        {moviesList.map((movie) => (
-          <SuggestionMovieCard
-            key={movie?.id}
-            name={movie?.original_title || ""}
-            poster={movie?.poster_path || ""}
-          />
-        ))}
+        {moviesList.map(
+          (movie) =>
+            movie && (
+              <SuggestionMovieCard
+                key={movie?.id}
+                name={movie?.original_title || ""}
+                poster={movie?.poster_path || ""}
+              />
+            )
+        )}
       </div>
     )
   );
