@@ -17,3 +17,6 @@ export const LANGUAGE_CODES = [
   { name: "Hindi", code: "hi" },
   { name: "Spanish", code: "es" },
 ];
+
+export const NETFLIX_USER_DEFAULT_LOGO =
+  "https://imgs.search.brave.com/Rk7-hrmpl-9XZoX9snFfZAp9QmO7RfILrPpy_UfpHfI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vd1dzS21o/OTRGZ3RyQ0FvZ3BC/YTJyZGtMNkdCMjhB/aUhwX0VQd2tYbHlF/RS9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlw/Yldkei9Mbk5sWVhK/amFDNWljbUYyL1pT/NWpiMjB2U2sxV1Vs/TmwvTWw5M09IaExW/alZVWlhkUC9hM055/UzNkRlNsaEVjR2wy/L1FXWnFaME5MV25j/M1YzcDMvTkM5eWN6/cG1hWFE2TlRZdy9P/ak15TURveE9qQXZa/enBqL1pTOWhTRkl3/WTBoTk5reDUvT1RO/WlYzaHpMMk5IUm5k/YS9XRXA2VEcxT2Rt/SlRPWEF2L1lsZEdi/bHBZVFhaaFIxRjIv/WW0xV01DOWFiWGh3/WlVNeC9kMk50T1cx/aFYzaHNMMHhZL1Fu/QlpNMUl4WTIxV2Vr/eFUvUlhjdlRVUkJk/R1ZETUhoTi9SRUYz/VEZSbk5DOWtNblJy/L1lsZHdlV0l6U21w/aE1sWnkvTDJGSFJY/Vmhia0p1LmpwZWc";

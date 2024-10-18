@@ -10,15 +10,16 @@ import { addUser, removeUser } from "../util/userSlice";
 import { useNavigate } from "react-router-dom";
 import { LANGUAGE_CODES } from "../constants/constant";
 import { setLang } from "../util/configSlice";
+import { NETFLIX_USER_DEFAULT_LOGO } from "../constants/constant";
 function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { LogOut } = useAuthFunctions();
-  const { user } = useSelector((store) => store.user);
-  const { photoURL } = user;
+  // const photo = useSelector((store) => store.user.user.photoURL);
   const location = useLocation();
   const path = location.pathname;
   const routes = path.split("/");
+  // console.log(photo);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -95,8 +96,8 @@ function Header() {
           )}
           <div className="">
             <img
-              className="w-[2.5rem] rounded-full text-white"
-              src={photoURL}
+              className="w-[2.5rem] rounded-md text-white"
+              src={NETFLIX_USER_DEFAULT_LOGO}
               alt={"User"}
             ></img>
           </div>

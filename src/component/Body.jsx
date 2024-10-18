@@ -4,6 +4,7 @@ import Login from "../page/Login";
 import Browse from "../page/Browse";
 import Home from "../page/Home";
 import GptSearch from "../page/GptSearch";
+import Footer from "./Footer";
 
 function Body() {
   const appRouter = createBrowserRouter([
@@ -28,6 +29,7 @@ function Body() {
   return (
     <div>
       <RouterProvider router={appRouter} />
+      <Footer />
     </div>
   );
 }

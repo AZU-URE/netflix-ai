@@ -7,7 +7,8 @@ function Login() {
     <div className="h-screen">
       <Header />
       <div className="h-full w-full opacity-60 absolute bg-gradient-to-b from-black via-black to-black"></div>
-      <div className="absolute h-full w-full flex items-end justify-center text-white">
+      <div className="absolute h-full w-full flex items-center justify-center text-white">
+        {/* <div className="absolute h-full w-full flex items-end justify-center text-white"> */}
         <LoginForm />
       </div>
       <img
